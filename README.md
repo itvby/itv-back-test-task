@@ -61,7 +61,7 @@
 
 ## Authentication and JWT:
 1. `POST /users` should accept `password` field and before save replace it with **hash**.
-2. Implement `POST /login` method which accepts **JSON** with `login` and `password` and returns **JWT** token in response body: `{ token: <jwt_token> }` (use [jsonwebtoken package](https://www.npmjs.com/package/jsonwebtoken)).
+2. Implement `POST /login` method which accepts **JSON** with `login` and `password` and returns **JWT** token in response body: `{ token: <jwt_token> }`.
 3. **JWT** token should contain `userId` and `login` in a **payload**.
 4. Secret that used for signing the token should be stored in `.env` file.
 5. For all client requests the **JWT** token should be added in HTTP `Authorization` header to all requests that requires authentication. HTTP authentication must follow `Bearer` scheme, e.g.:
