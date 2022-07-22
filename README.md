@@ -1,5 +1,7 @@
 # REST Service – Laravel & MySQL / PostgreSQL & JWT
 
+** – optional task or sub-task
+
 **Create an application, the application should operate with the following resources:**
 
 - `User` (with attributes):
@@ -52,10 +54,10 @@
 3. When somebody `DELETEs` `User`, all `Tasks` where `User` is assignee should be updated to put `userId = null`.
 
 ## MySQL / PostgreSQL & Eloquent ORM:
-1. Use **MySQL / PostgreSQL** database to store **REST** service data (`Users`, `Boards`, `Tasks`)
+1. Use **MySQL / PostgreSQL** database to store **REST** service data (`Users`, `Boards`, `Columns`, `Tasks`)
 2. Use [Eloquent ORM](https://laravel.com/docs/9.x/eloquent) to store and update data
 3. The information on DB connection should be stored in `.env` file
-4. **MySQL / PostgreSQL** database should run inside of the `docker` container
+4. ****MySQL / PostgreSQL** database should run inside of the `docker` container
 
 ## Authentication and JWT:
 1. `POST /users` should accept `password` field and before save replace it with **hash**.
@@ -70,7 +72,7 @@
 7. In case of the HTTP `Authorization` header in the request is absent or invalid or doesn’t follow `Bearer` scheme, further router method execution should be stopped and lead to response with HTTP **401** code (Unauthorized error) and the corresponding error message.
 8. **Add admin user to DB** on service start with `login = admin` and `password = admin`.
 
-## Docker (optional):
+## **Docker:
 
 ### Prerequisites
 
